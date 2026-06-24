@@ -1,0 +1,247 @@
+// ============================================
+// BD-MART Design Tokens
+// Neighbourhood Essentials, Anytime Nearby
+// ============================================
+
+// --- BRAND COLORS (from logo) ---
+// Logo uses bold Red + Dark Navy + White
+// Accent: warm saffron/orange for energy
+
+:root {
+    // Primary Brand
+    --color-primary: #2D6A30; // main green (logo center)
+    --color-primary-dark: #1B4D1E; // deep green (hover/active)
+    --color-primary-light: #3D8C42;
+
+    // Secondary
+    --color-secondary: #0D1B2A; // deep navy (logo text)
+    --color-secondary-mid: #1A2E44; // mid navy
+
+    // Accent
+    --color-accent: #F5A623; // saffron/amber (offers, badges)
+    --color-accent-light: #FFD166; // soft gold
+
+    // Neutrals
+    --color-white: #FFFFFF;
+    --color-off-white: #F8F9FA;
+    --color-gray-100: #F1F3F5;
+    --color-gray-200: #E9ECEF;
+    --color-gray-300: #DEE2E6;
+    --color-gray-400: #CED4DA;
+    --color-gray-500: #ADB5BD;
+    --color-gray-600: #6C757D;
+    --color-gray-700: #495057;
+    --color-gray-800: #343A40;
+    --color-gray-900: #212529;
+    --color-black: #0A0A0A;
+
+    // Semantic
+    --color-success: #28A745;
+    --color-warning: #FFC107;
+    --color-error: #DC3545;
+    --color-info: #17A2B8;
+
+    // WhatsApp
+    --color-whatsapp: #25D366;
+    --color-whatsapp-dark: #128C7E;
+
+    // --- LIGHT MODE SURFACES ---
+    --color-bg-primary: #FFFFFF;
+    --color-bg-secondary: #F8F9FA;
+    --color-bg-tertiary: #F1F3F5;
+    --color-bg-card: #FFFFFF;
+    --color-bg-nav: #FFFFFF;
+    --color-bg-footer: #0D1B2A;
+
+    --color-text-primary: #0D1B2A;
+    --color-text-secondary: #495057;
+    --color-text-muted: #6C757D;
+    --color-text-inverse: #FFFFFF;
+
+    --color-border: #DEE2E6;
+    --color-border-light: #E9ECEF;
+
+    // Shadow
+    --shadow-sm: 0 1px 3px rgba(13, 27, 42, 0.08);
+    --shadow-md: 0 4px 12px rgba(13, 27, 42, 0.12);
+    --shadow-lg: 0 8px 24px rgba(13, 27, 42, 0.16);
+    --shadow-xl: 0 16px 48px rgba(13, 27, 42, 0.20);
+
+    // --- TYPOGRAPHY ---
+    --font-display: 'Hind Siliguri', 'Noto Sans Bengali', sans-serif;
+    --font-body: 'Inter', 'Hind Siliguri', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+
+    // Scale
+    --text-xs: 0.75rem; // 12px
+    --text-sm: 0.875rem; // 14px
+    --text-base: 1rem; // 16px
+    --text-md: 1.125rem; // 18px
+    --text-lg: 1.25rem; // 20px
+    --text-xl: 1.5rem; // 24px
+    --text-2xl: 1.875rem; // 30px
+    --text-3xl: 2.25rem; // 36px
+    --text-4xl: 3rem; // 48px
+    --text-5xl: 3.75rem; // 60px
+
+    // Weight
+    --weight-regular: 400;
+    --weight-medium: 500;
+    --weight-semibold: 600;
+    --weight-bold: 700;
+    --weight-black: 900;
+
+    // --- SPACING ---
+    --space-1: 0.25rem;
+    --space-2: 0.5rem;
+    --space-3: 0.75rem;
+    --space-4: 1rem;
+    --space-5: 1.25rem;
+    --space-6: 1.5rem;
+    --space-8: 2rem;
+    --space-10: 2.5rem;
+    --space-12: 3rem;
+    --space-16: 4rem;
+    --space-20: 5rem;
+    --space-24: 6rem;
+
+    // --- BORDER RADIUS ---
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+    --radius-xl: 16px;
+    --radius-2xl: 24px;
+    --radius-full: 9999px;
+
+    // --- TRANSITIONS ---
+    --transition-fast: 150ms ease;
+    --transition-base: 250ms ease;
+    --transition-slow: 400ms ease;
+
+    // --- LAYOUT ---
+    --container-max: 1280px;
+    --container-padding: 1rem;
+    --nav-height: 68px;
+    --nav-height-mobile: 60px;
+}
+
+// --- DARK MODE ---
+// :global() is required so CSS Modules doesn't treat this as a local selector
+:global([data-theme='dark']) {
+    --color-bg-primary: #0D1B2A;
+    --color-bg-secondary: #1A2E44;
+    --color-bg-tertiary: #243850;
+    --color-bg-card: #1A2E44;
+    --color-bg-nav: #0A1520;
+    --color-bg-footer: #050E17;
+
+    --color-text-primary: #F8F9FA;
+    --color-text-secondary: #CED4DA;
+    --color-text-muted: #ADB5BD;
+    --color-text-inverse: #0D1B2A;
+
+    --color-border: #243850;
+    --color-border-light: #1A2E44;
+
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.30);
+    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.40);
+    --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.50);
+    --shadow-xl: 0 16px 48px rgba(0, 0, 0, 0.60);
+
+    // Keep primary/accent same in dark mode
+    --color-bg-footer: #050E17;
+}
+
+// --- SCSS VARIABLES (for use in SCSS logic) ---
+$breakpoint-xs: 360px;
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+$breakpoint-2xl: 1400px;
+
+// Mixins
+@mixin respond-to($bp) {
+    @if $bp =='xs' {
+        @media (max-width: #{$breakpoint-xs}) {
+            @content;
+        }
+    }
+
+    @if $bp =='sm' {
+        @media (max-width: #{$breakpoint-sm}) {
+            @content;
+        }
+    }
+
+    @if $bp =='md' {
+        @media (max-width: #{$breakpoint-md}) {
+            @content;
+        }
+    }
+
+    @if $bp =='lg' {
+        @media (max-width: #{$breakpoint-lg}) {
+            @content;
+        }
+    }
+
+    @if $bp =='xl' {
+        @media (max-width: #{$breakpoint-xl}) {
+            @content;
+        }
+    }
+}
+
+@mixin respond-up($bp) {
+    @if $bp =='sm' {
+        @media (min-width: #{$breakpoint-sm}) {
+            @content;
+        }
+    }
+
+    @if $bp =='md' {
+        @media (min-width: #{$breakpoint-md}) {
+            @content;
+        }
+    }
+
+    @if $bp =='lg' {
+        @media (min-width: #{$breakpoint-lg}) {
+            @content;
+        }
+    }
+
+    @if $bp =='xl' {
+        @media (min-width: #{$breakpoint-xl}) {
+            @content;
+        }
+    }
+}
+
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin flex-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@mixin container {
+    width: 100%;
+    max-width: var(--container-max);
+    margin-inline: auto;
+    padding-inline: var(--container-padding);
+
+    @include respond-up('md') {
+        padding-inline: 1.5rem;
+    }
+
+    @include respond-up('lg') {
+        padding-inline: 2rem;
+    }
+}
