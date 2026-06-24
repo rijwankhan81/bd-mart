@@ -2,12 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
-// Swiper
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination, EffectFade } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/effect-fade";
+
 // Icons
 import {
   FiMapPin,
@@ -280,20 +275,8 @@ export default function HomePage({ lang }: HomePageProps) {
 
           {/* Hero Visual — Swiper or Placeholder */}
           <div className={styles.heroVisual}>
-            <div className={styles.sliderWrap}>
-              <Swiper
-                modules={[Autoplay, Pagination, EffectFade]}
-                effect="fade"
-                autoplay={{ delay: 3500, disableOnInteraction: false }}
-                pagination={{ clickable: true }}
-                loop
-              >
-                {["🛒", "☕", "🍼", "🧴"].map((emoji, i) => (
-                  <SwiperSlide key={i}>
-                    <span style={{ fontSize: "6rem" }}>{emoji}</span>
-                  </SwiperSlide>
-                ))}
-              </Swiper>
+            <div className={styles.storeWrap}>
+              <img src="/images/bd-store.jpg" alt="" />
             </div>
 
             {/* Floating Cards */}

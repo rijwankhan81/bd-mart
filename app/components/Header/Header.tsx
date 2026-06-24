@@ -3,15 +3,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import {
-  FiSun,
-  FiMoon,
-  FiChevronDown,
-  FiX,
-  FiPhone,
-  FiMapPin,
-  FiClock,
-} from "react-icons/fi";
+import { FiSun, FiMoon, FiChevronDown, FiX, FiClock } from "react-icons/fi";
 import {
   FaWhatsapp,
   FaStore,
@@ -168,18 +160,18 @@ export default function Header({
         <div className={styles.topBar}>
           <div className={styles.topBarInner}>
             <div className={styles.topBarLeft}>
-              <span className={styles.topBarItem}>
+              {/* <span className={styles.topBarItem}>
                 <FiPhone />
                 {t("Call / WhatsApp", "কল / হোয়াটসঅ্যাপ")}: 01XXXXXXXX
-              </span>
+              </span> */}
               <span className={styles.topBarItem}>
                 <FiClock />
                 {t("Open: 7AM – 11PM", "খোলা: সকাল ৭টা – রাত ১১টা")}
               </span>
-              <span className={styles.topBarItem}>
+              {/* <span className={styles.topBarItem}>
                 <FiMapPin />
                 {t("Find Nearest Outlet", "কাছের শাখা খুঁজুন")}
-              </span>
+              </span> */}
             </div>
             <div className={styles.topBarRight}>
               <button

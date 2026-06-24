@@ -27,9 +27,7 @@
     font-weight: var(--weight-medium);
     padding-block: 6px;
 
-    @include respond-to('md') {
-        display: none;
-    }
+
 }
 
 .topBarInner {
