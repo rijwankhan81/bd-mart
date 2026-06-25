@@ -114,6 +114,16 @@ const offers = [
     priceNew: "৳ 299",
     priceOld: "৳ 370",
   },
+  {
+    image: "/images/offers/snack-combo.jpg",
+    badge: "HOT",
+    title: "Evening Snack Combo",
+    titleBn: "সন্ধ্যার স্ন্যাকস কম্বো",
+    desc: "Chips, soft drink & chocolate",
+    descBn: "চিপস, সফট ড্রিংক ও চকলেট",
+    priceNew: "৳ 179",
+    priceOld: "৳ 220",
+  },
 ];
 
 const features = [

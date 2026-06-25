@@ -98,6 +98,12 @@
         padding-bottom: 7px;
     }
 
+    @include respond-to('sm') {
+
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+
 
 }
 
@@ -117,6 +123,10 @@
 
         @include respond-to('md') {
             height: 54px;
+        }
+
+        @include respond-to('sm') {
+            height: 40px;
         }
     }
 

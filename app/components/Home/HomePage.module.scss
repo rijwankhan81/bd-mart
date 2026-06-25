@@ -479,15 +479,16 @@
 
 .offerCards {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: var(--space-5);
 
     @include respond-to('lg') {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     }
 
     @include respond-to('sm') {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: var(--space-3);
     }
 }
 
@@ -536,12 +537,20 @@
     font-weight: var(--weight-bold);
     color: var(--color-text-primary);
     margin-bottom: var(--space-1);
+
+    @include respond-to('sm') {
+        font-size: var(--text-sm);
+    }
 }
 
 .offerDesc {
     font-size: var(--text-sm);
     color: var(--color-text-secondary);
     margin-bottom: var(--space-3);
+
+    @include respond-to('sm') {
+        font-size: var(--text-xs);
+    }
 }
 
 .offerPrice {
@@ -555,12 +564,20 @@
     font-weight: var(--weight-black);
     color: var(--color-primary);
     font-family: var(--font-display);
+
+    @include respond-to('sm') {
+        font-size: var(--text-md);
+    }
 }
 
 .priceOld {
     font-size: var(--text-sm);
     color: var(--color-text-muted);
     text-decoration: line-through;
+
+    @include respond-to('sm') {
+        font-size: var(--text-xs);
+    }
 }
 
 // ======================================
