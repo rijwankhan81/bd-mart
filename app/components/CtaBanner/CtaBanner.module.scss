@@ -1,0 +1,197 @@
+// ============================================
+// CtaBanner.module.scss — BD-MART
+// Reusable closing CTA section
+// ============================================
+
+@import '../../styles/tokens';
+
+.ctaBanner {
+    padding-block: var(--space-20);
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+
+    @include respond-to('md') {
+        padding-block: var(--space-14);
+    }
+
+    // ---- VARIANT: DARK (default) ----
+    &.dark {
+        background: linear-gradient(135deg, var(--color-secondary) 0%, #1A2E44 100%);
+
+        &::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(circle at 20% 50%, rgba(208, 2, 27, 0.20) 0%, transparent 50%),
+                radial-gradient(circle at 80% 50%, rgba(245, 166, 35, 0.10) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .title {
+            color: var(--color-white);
+        }
+
+        .subtitle {
+            color: rgba(255, 255, 255, 0.60);
+        }
+    }
+
+    // ---- VARIANT: LIGHT ----
+    &.light {
+        background: var(--color-bg-secondary);
+        border-top: 1px solid var(--color-border-light);
+        border-bottom: 1px solid var(--color-border-light);
+
+        .title {
+            color: var(--color-text-primary);
+        }
+
+        .subtitle {
+            color: var(--color-text-secondary);
+        }
+    }
+
+    // ---- VARIANT: BRAND (solid red) ----
+    &.brand {
+        background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+
+        &::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 70% 30%, rgba(255, 255, 255, 0.12) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .title {
+            color: var(--color-white);
+        }
+
+        .subtitle {
+            color: rgba(255, 255, 255, 0.80);
+        }
+    }
+
+    // ---- SIZE: compact ----
+    &.compact {
+        padding-block: var(--space-12);
+    }
+}
+
+.inner {
+    @include container;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-6);
+}
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    padding: 0.3rem 1rem;
+    background: rgba(245, 166, 35, 0.15);
+    border: 1px solid rgba(245, 166, 35, 0.35);
+    border-radius: var(--radius-full);
+    font-size: var(--text-xs);
+    font-weight: var(--weight-bold);
+    color: var(--color-accent);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+
+    .light & {
+        background: rgba(208, 2, 27, 0.08);
+        border-color: rgba(208, 2, 27, 0.20);
+        color: var(--color-primary);
+    }
+
+    .brand & {
+        background: rgba(255, 255, 255, 0.15);
+        border-color: rgba(255, 255, 255, 0.30);
+        color: white;
+    }
+}
+
+.title {
+    font-family: var(--font-display);
+    font-size: var(--text-3xl);
+    font-weight: var(--weight-black);
+    line-height: 1.2;
+    max-width: 600px;
+
+    em {
+        font-style: normal;
+        color: var(--color-accent);
+    }
+
+    .light & em {
+        color: var(--color-primary);
+    }
+
+    .brand & em {
+        color: var(--color-accent);
+    }
+
+    @include respond-to('sm') {
+        font-size: var(--text-2xl);
+    }
+}
+
+.subtitle {
+    font-size: var(--text-md);
+    max-width: 480px;
+    line-height: 1.75;
+}
+
+.btnRow {
+    display: flex;
+    gap: var(--space-4);
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: var(--space-2);
+
+    @include respond-to('sm') {
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+        max-width: 320px;
+    }
+}
+
+.statsRow {
+    display: flex;
+    gap: var(--space-8);
+    margin-top: var(--space-2);
+    flex-wrap: wrap;
+    justify-content: center;
+
+    @include respond-to('sm') {
+        gap: var(--space-5);
+    }
+}
+
+.stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+
+    strong {
+        font-family: var(--font-display);
+        font-size: var(--text-xl);
+        font-weight: var(--weight-black);
+        color: inherit;
+    }
+
+    span {
+        font-size: var(--text-xs);
+        opacity: 0.6;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+    }
+}

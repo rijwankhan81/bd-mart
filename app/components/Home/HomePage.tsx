@@ -30,6 +30,8 @@ import { MdLocalOffer, MdDeliveryDining } from "react-icons/md";
 
 import styles from "./HomePage.module.scss";
 import "../../styles/common.scss";
+import CTA from "../CtaBanner/CtaBanner";
+import CtaBanner from "../CtaBanner/CtaBanner";
 
 interface HomePageProps {
   lang: "en" | "bn";
@@ -626,40 +628,8 @@ export default function HomePage({ lang }: HomePageProps) {
       </section>
 
       {/* ======== OUTLET CTA ======== */}
-      <section className={styles.outletCta} aria-label="Find outlet">
-        <div className={styles.outletCtaInner}>
-          <div className={styles.outletCtaText}>
-            <h2 className={styles.outletCtaTitle}>
-              {t(
-                "Find Your Nearest BD-MART Outlet",
-                "কাছের BD-MART শাখা খুঁজে নিন",
-              )}
-            </h2>
-            <p className={styles.outletCtaSubtitle}>
-              {t(
-                "Multiple outlets across your area. Walk in, pick up, or order online — we are always near.",
-                "আপনার এলাকায় একাধিক শাখা। হেঁটে আসুন, পিকআপ করুন অথবা অনলাইনে অর্ডার দিন — আমরা সবসময় কাছে।",
-              )}
-            </p>
-          </div>
 
-          <div className={styles.outletCtaBtns}>
-            <Link href="/outlets" className="btn btn--accent btn--lg">
-              <FiMapPin />
-              {t("Find Outlet", "শাখা খুঁজুন")}
-            </Link>
-            <a
-              href={WHATSAPP_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn btn--whatsapp btn--lg"
-            >
-              <FaWhatsapp />
-              {t("Order Now", "অর্ডার করুন")}
-            </a>
-          </div>
-        </div>
-      </section>
+      <CtaBanner id="outlet" />
     </main>
   );
 }
