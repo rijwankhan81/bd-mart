@@ -20,7 +20,7 @@ import { MdLocalOffer } from "react-icons/md";
 import styles from "./AboutPage.module.scss";
 import "../../styles/common.scss";
 import { useApp } from "../../context/AppContext";
-import CtaBanner from "../../components/CtaBanner/CtaBanner";
+import CtaBanner from "../CtaBanner/CtaBanner";
 
 // ─────────────────────────────────────────
 // DATA
