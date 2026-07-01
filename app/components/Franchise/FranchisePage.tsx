@@ -7,7 +7,6 @@ import {
   FiMapPin,
   FiUser,
   FiPhone,
-  FiHome,
   FiMaximize2,
   FiCheckCircle,
   FiTrendingUp,

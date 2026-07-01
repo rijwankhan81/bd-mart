@@ -11,10 +11,6 @@ import {
   FiTruck,
   FiArrowRight,
   FiStar,
-  FiUser,
-  FiPhone,
-  FiHome,
-  FiCheckCircle,
 } from "react-icons/fi";
 import {
   FaWhatsapp,
@@ -24,13 +20,11 @@ import {
   FaShower,
   FaHome,
   FaUtensils,
-  FaHandshake,
 } from "react-icons/fa";
 import { MdLocalOffer, MdDeliveryDining } from "react-icons/md";
 
 import styles from "./HomePage.module.scss";
 import "../../styles/common.scss";
-import CTA from "../CtaBanner/CtaBanner";
 import CtaBanner from "../CtaBanner/CtaBanner";
 
 interface HomePageProps {
