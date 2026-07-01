@@ -143,7 +143,7 @@ const timeline = [
 // ─────────────────────────────────────────
 // COMPONENT
 // ─────────────────────────────────────────
-export default function HomePage() {
+export default function AboutPage() {
   const { t } = useApp();
 
   return (
